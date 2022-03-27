@@ -4,26 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Revenda Veículos</title>
+    <title>Restautante JS</title>
   </head>
   <body>
-    <h1>Revenda Veículos - JS</h1>
-
+    <h1>Restaurante JS</h1>
     <form>
       <p>
-        Veículo:
-        <input type="text" id="veiculo" required />
+        Buffet por Quilo R$:
+        <input type="number" min="0" step="0.01" id="quilo" required />
       </p>
       <p>
-        Preço:
-        <input type="number" id="preco" required />
+        Consumo do cliente (gr):
+        <input type="number" min="0" id="consumo" required />
       </p>
-      <input type="submit" id="submit" value="Ver Promoção" />
+      <input type="submit" value="Calcular Preço" />
     </form>
-
     <h3></h3>
-    <h4></h4>
-    <h5></h5>
+
     <script src="script.js"></script>
   </body>
 </html>
