@@ -1,4 +1,4 @@
-// RETORNAR CANDIDATOS APROVADOS (REQUISITOS: MAIOR DE IDADE, CONHECIMENTOS: REACT, NODE, JAVASCRIPT)
+// RETORNAR CANDIDATOS APROVADOS (REQUISITOS: MAIOR DE IDADE, CONHECIMENTOS: ReactJS, Node, JavaScript)
 const candidatos = [
   {
     nome: 'Pedro',
@@ -8,7 +8,7 @@ const candidatos = [
   {
     nome: 'Lucas',
     idade: 29,
-    conhecimentos: ['VueJS', 'JavaScript', 'Python', 'C++', 'ReactJS']
+    conhecimentos: ['VueJS', 'JavaScript', 'Python', 'ReactJS']
   },
   {
     nome: 'Juliana',
@@ -26,6 +26,7 @@ const candidatos = [
     conhecimentos: ['Angular', 'JavaScript', 'HTML', 'ReactJS', 'CSS']
   }
 ]
+
 function FiltraCandidatos(candidato) {
   let aprovados = candidato.filter(
     aprovado =>
@@ -42,3 +43,4 @@ function FiltraCandidatos(candidato) {
   console.log(`Candidato(s) aprovado(s): ${candidatosAprovados}`)
 }
 FiltraCandidatos(candidatos)
+// console.log(candidatos[0].conhecimentos.toUpperCase())
