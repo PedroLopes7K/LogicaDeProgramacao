@@ -1,14 +1,14 @@
-// RETORNAR CANDIDATOS APROVADOS (REQUISITOS: MAIOR DE IDADE, CONHECIMENTOS: ReactJS, Node, JavaScript)
+// RETORNAR CANDIDATOS APROVADOS (REQUISITOS: MAIOR DE IDADE, CONHECIMENTOS: REACT, NODE, JAVASCRIPT)
 const candidatos = [
   {
     nome: 'Pedro',
     idade: 19,
-    conhecimentos: ['ReactJS', 'JavaScript', 'HTML', 'CSS', 'Node']
+    conhecimentos: ['React', 'JavaScript', 'HTML', 'CSS', 'Node']
   },
   {
     nome: 'Lucas',
     idade: 29,
-    conhecimentos: ['VueJS', 'JavaScript', 'Python', 'ReactJS']
+    conhecimentos: ['VueJS', 'JavaScript', 'Python', 'React', 'node']
   },
   {
     nome: 'Juliana',
@@ -18,25 +18,32 @@ const candidatos = [
   {
     nome: 'Bruno',
     idade: 17,
-    conhecimentos: ['ReactJS', 'JavaScript', 'HTML', 'Node', 'CSS']
+    conhecimentos: ['React', 'JavaScript', 'HTML', 'Node', 'CSS']
   },
   {
     nome: 'Mariana',
     idade: 21,
-    conhecimentos: ['Angular', 'JavaScript', 'HTML', 'ReactJS', 'CSS']
+    conhecimentos: ['Angular', 'JavaScript', 'HTML', 'React', 'CSS']
   }
 ]
 
 function FiltraCandidatos(candidato) {
-  let aprovados = candidato.filter(
+  let pessoas = candidato
+  for (let pessoa of pessoas) {
+    // pessoa.nome = pessoa.nome.toUpperCase()
+    pessoa.conhecimentos = pessoa.conhecimentos.map(tech => {
+      return tech.toUpperCase()
+    })
+  }
+  // console.log(pessoas)
+  let aprovados = pessoas.filter(
     aprovado =>
       aprovado.idade >= 18 &&
-      aprovado.conhecimentos.includes('JavaScript') &&
-      aprovado.conhecimentos.includes('ReactJS') &&
-      aprovado.conhecimentos.includes('Node')
+      aprovado.conhecimentos.includes('JAVASCRIPT') &&
+      aprovado.conhecimentos.includes('REACT') &&
+      aprovado.conhecimentos.includes('NODE')
   )
   let candidatosAprovados = []
-
   for (let aprovado of aprovados) {
     candidatosAprovados.push(aprovado.nome)
   }
