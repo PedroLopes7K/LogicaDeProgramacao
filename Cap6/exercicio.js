@@ -3,12 +3,12 @@ const candidatos = [
   {
     nome: 'Pedro',
     idade: 19,
-    conhecimentos: ['React', 'JavaScript', 'HTML', 'CSS', 'Node']
+    conhecimentos: ['ReAcT', 'JavaScript', 'HTML', 'CSS', 'Node']
   },
   {
     nome: 'Lucas',
     idade: 29,
-    conhecimentos: ['VueJS', 'JavaScript', 'Python', 'React', 'node']
+    conhecimentos: ['VueJS', 'JavaScript', 'Python', 'reAct', 'node']
   },
   {
     nome: 'Juliana',
@@ -23,7 +23,7 @@ const candidatos = [
   {
     nome: 'Mariana',
     idade: 21,
-    conhecimentos: ['Angular', 'JavaScript', 'HTML', 'React', 'CSS']
+    conhecimentos: ['Angular', 'JavaScript', 'HTML', 'react', 'CSS']
   }
 ]
 

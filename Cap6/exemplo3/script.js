@@ -29,3 +29,43 @@ form.btListar.addEventListener('click', () => {
 })
 
 // CONTINUA...
+form.btFiltrar.addEventListener('click', () => {
+  const maximo = Number(
+    prompt('Qual o valor máximo que o cliente deseja pagar?')
+  )
+  if (maximo === 0 || isNaN(maximo)) {
+    // se valor for = 0 ou invalido
+    return
+  }
+  const filtroCarros = carros.filter(carro => carro.preco <= maximo)
+  if (filtroCarros.length == 0) {
+    alert('Não temos carros disponiveis nessa faixa de preço!')
+    return
+  }
+  let lista = ''
+  for (const carro of filtroCarros) {
+    lista += `${carro.modelo} - R$: ${carro.preco.toFixed(2)}\n`
+  }
+  resp.innerText = `Carros até R$: ${maximo.toFixed(2)}\n ${'-'.repeat(
+    40
+  )}\n ${lista} `
+})
+
+form.btSimular.addEventListener('click', () => {
+  const desconto = Number(prompt('Qual o percentual de desconto?'))
+  if (desconto === 0 || isNaN(desconto)) {
+    return
+  }
+
+  const carrosEmPromo = carros.map(car => ({
+    modelo: car.modelo,
+    preco: car.preco - (car.preco * desconto) / 100
+  }))
+  let lista = ''
+  for (const carro of carrosEmPromo) {
+    lista += `${carro.modelo} - R$: ${carro.preco.toFixed(2)}\n`
+  }
+  resp.innerText = `Carros com  ${desconto}% de desconto:\n ${'-'.repeat(
+    40
+  )}\n ${lista} `
+})
