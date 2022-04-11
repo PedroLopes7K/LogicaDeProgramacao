@@ -37,6 +37,7 @@ form.btFiltrar.addEventListener('click', () => {
     // se valor for = 0 ou invalido
     return
   }
+  // cria um novo vetor com os objetos que atendem a condição de filtro
   const filtroCarros = carros.filter(carro => carro.preco <= maximo)
   if (filtroCarros.length == 0) {
     alert('Não temos carros disponiveis nessa faixa de preço!')
