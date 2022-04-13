@@ -46,6 +46,7 @@ form.btResumir.addEventListener('click', () => {
     if (idade == aux) {
       nomes.push(nome)
     } else {
+      // quando a condicao se torna falsa ele escreve os dados da idade anterior e passa para a proxima idade na linha 53
       resumo += `${aux} ano(s): ${nomes.length} criança(s) - `
       resumo += `${((nomes.length / copia.length) * 100).toFixed(2)}%\n`
       resumo += `( ${nomes.join(', ')} )\n\n`
@@ -54,6 +55,7 @@ form.btResumir.addEventListener('click', () => {
       nomes.push(nome)
     }
   }
+  // após a ultima interação do array a ultima idade não pode ser montada, então e montada agora, com o valor atual de aux e nomes
   resumo += `${aux} ano(s): ${nomes.length} criança(s)`
   resumo += `${((nomes.length / copia.length) * 100).toFixed(2)}%\n`
   resumo += `( ${nomes.join(', ')} )\n\n`

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notas Alunos</title>
+  </head>
+  <body>
+    <h1>Notas Alunos</h1>
+
+    <form>
+      <p>
+        Informe o nome do aluno(a):
+        <input type="text " required id="nome" />
+      </p>
+
+      <p>
+        Informe a nota do aluno(a)
+        <input type="number" required id="nota" />
+      </p>
+      <input type="submit" value="Salvar" />
+    </form>
+    <br />
+    <button id="imprimir">Imprimir Notas e Alunos(a)</button>
+    <button id="fim">Finalizar)</button>
+
+    <pre id="resp"></pre>
+    <br />
+    <pre id="complemento"></pre>
+
+    <script src="script.js"></script>
+  </body>
+</html>
