@@ -36,8 +36,10 @@ form.btResumir.addEventListener('click', () => {
 
   const copia = [...criancas] // criando copia do array com spread
   copia.sort((a, b) => a.idade - b.idade)
+  console.log(copia)
   let resumo = ''
   let aux = copia[0].idade // menor idade do vetor ordenado
+  console.log(aux)
   let nomes = [] // array para nomes de cada idade
   for (const crianca of copia) {
     const { nome, idade } = crianca
