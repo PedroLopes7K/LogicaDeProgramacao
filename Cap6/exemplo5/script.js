@@ -24,6 +24,7 @@ form.addEventListener('submit', e => {
 let imprimeAlunos = ''
 
 imprimir.addEventListener('click', () => {
+  resposta.innerText = ''
   if (alunos.length === 0) {
     return alert('Não há alunos cadastrados')
   }
