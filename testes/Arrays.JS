@@ -51,3 +51,14 @@ alunos.forEach(imprimeAlunos)
 function imprimeAlunos(nome) {
   console.log(nome)
 }
+
+// EXERCICIO 4
+// MAP PRECISA DE RETURN, A MENOS QUE A FUNÇÃO TENHA UMA LINHA APENAS
+const arrayNums = [1, 2, 3, 4]
+function multiplicaPorDez(num) {
+  return num * 10
+}
+
+const arraySomada = arrayNums.map(multiplicaPorDez)
+
+console.log(arraySomada)

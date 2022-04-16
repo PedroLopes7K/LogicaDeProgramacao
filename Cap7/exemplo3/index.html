@@ -1,0 +1,19 @@
+<script>
+  // const palavra = prompt('Palavra: ')
+  const palavra = 'Pedro'
+  const tamanhoPalavra = palavra.length
+
+  // inverso inicia com a ultima letra da palavra em caixa alta, no caso o 'O'
+  //                  01234
+  //         exemplo  Pedro
+  // palavra.length = 12345
+  let inverso = palavra.charAt(tamanhoPalavra - 1).toUpperCase()
+  console.log(inverso)
+
+  for (let i = tamanhoPalavra - 2; i >= 0; i--) {
+    inverso += palavra.charAt(i).toLowerCase()
+  }
+  console.log(inverso)
+
+  // alert(`Palavra: ${palavra}\nInvertida: ${inverso}`)
+</script>
